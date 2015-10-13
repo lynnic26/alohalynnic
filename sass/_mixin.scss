@@ -1,0 +1,46 @@
+@mixin transition($transition){
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+@mixin transform-origin($origin){
+	-webkit-transform-origin:$origin;
+	-moz-transform-origin:$origin;
+	-ms-transform-origin:$origin;
+	-o-transform-origin:$origin;
+	transform-origin:$origin;
+}
+@mixin translateX($translateX){
+	-webkit-transform:translateX($translateX);
+	-moz-transform:translateX($translateX);
+	-ms-transform:translateX($translateX);
+	-o-transform:translateX($translateX);
+	transform:translateX($translateX);
+}
+@mixin scale($scale){
+	-webkit-transform:scale($scale);
+	-moz-transform:scale($scale);
+	-ms-transform:scale($scale);
+	-o-transform:scale($scale);
+	transform:scale($scale);
+}
+@mixin rotateY($rotateY){
+	-webkit-transform: rotateY($rotateY);
+	-moz-transform: rotateY($rotateY);
+	-ms-transform: rotateY($rotateY);
+	-o-transform: rotateY($rotateY);
+	transform: rotateY($rotateY);
+}
+@mixin opacity($opacity){
+	opcity:$opacity;
+	filter:alpha(opacity=$opacity * 100);
+}
+@mixin animation($animation){
+	-webkit-animation: ($animation);
+	-moz-animation: ($animation);
+	-ms-animation: ($animation);
+	-o-animation: ($animation);
+	animation: ($animation);
+}

@@ -1,0 +1,97 @@
+@import "mixin";
+@import "bubbles";
+@import "welcomebtn";
+
+$themeColor:#ff514c;
+
+html,body,.container,#canvas{
+	height: 100%;
+	// overflow: hidden;
+}
+html,body,.main-content{
+	overflow: hidden;
+}
+body{
+	background-color: #fff;
+}
+.container,#canvas{
+	position: relative;
+}
+#canvas{
+	@include transition(all .5s ease);
+	@include translateX(0px);
+}
+.siderbar-nav{
+	width: 300px;
+	height: 100%;
+
+    top:0;
+    left: -300px;
+	position: absolute;
+    
+    text-align: center;
+	background-color: #333;
+
+	@include transition(all 0.5s ease);
+	@include transform-origin(100% 50%);
+	@include rotateY(-90deg);
+    
+    color:#fff;
+   // @include rotateY()
+   h1{
+   	  margin-top: 70px;
+   	  font-size: 55px;
+   	 font-family: "Kaushan Script","Helvetica Neue",Helvetica,'Microsoft YaHei';
+   }
+   h3{
+   	 margin-top: 20px;
+   	 font-size: 25px;
+   	  font-family: "Kaushan Script","Helvetica Neue",Helvetica,'Microsoft YaHei';
+   }
+   ul{
+   	 margin-top: 50px;
+   	 font-family: 'Lato', sans-serif;
+   	 list-style: none;
+   	 li{
+   	 	padding: 10px 0;
+   	 	a{
+   	 		font-size: 20px;
+   	 		text-decoration: none;
+   	 		color: #fff;
+   	 	}
+   	 }
+   	 
+   }
+}
+
+#canvas.display-nav{
+    @include translateX(300px);
+}
+#canvas.display-nav .siderbar-nav{
+	
+	// @include rotateY(0deg);
+	-webkit-transform:perspective(600px) rotateY(0deg);
+   -moz-transform:perspective(600px) rotateY(0deg);
+    -ms-transform:perspective(600px) rotateY(0deg);
+     -o-transform:perspective(600px) rotateY(0deg);
+        transform:perspective(600px) rotateY(0deg);
+}
+.main-content{
+     background: $themeColor url(../imgs/noise.png);
+     height: 100%;
+     position: relative;
+
+    //  background: $themeColor;
+    // background: -webkit-linear-gradient(top left, $themeColor 0%, #53e3a6 100%);
+    // background: -moz-linear-gradient(top left, $themeColor 0%, #53e3a6 100%);
+    // background: -o-linear-gradient(top left, $themeColor 0%, #53e3a6 100%);
+    // background: linear-gradient(to bottom right, $themeColor 0%, #53e3a6 100%);
+}
+.toggle-nav{
+	color: darken(#fff,10);
+	font-size: 30px;
+	position: absolute;
+	top:40px;
+	left: 40px;
+  z-index: 2;
+}

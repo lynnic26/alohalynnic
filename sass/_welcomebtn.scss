@@ -1,0 +1,59 @@
+$easing: all 0.5s cubic-bezier(.55,0,.1,1);
+$tokenClr: #16A085;
+.center {
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  background: url(http://7nj356.com1.z0.glb.clouddn.com/lynnicfox.jpg);
+  background-size: 101%;
+  background-position: top left;
+  border-radius: 100%;
+  margin: 170px auto;
+  transition: $easing;
+  box-shadow: 0px 5px 10px #000;
+  &:hover {
+    box-shadow: 0px 5px 20px #000;
+    background-size: 115%;
+    .outside {
+     transform: rotate(-45deg) translate(0px) rotate(-315deg);
+      background: darken(rgba($tokenClr,0.5),10%);
+      width: 200px;
+      letter-spacing: 10px;
+      padding-left: 10px;
+      line-height: 200px;
+      height: 200px;
+      margin-top: -100px;
+      margin-left: -100px;
+      transition: $easing, letter-spacing 1.5s ease-out;
+    }
+  }
+  .outside {
+    display: block;
+    position: absolute;
+    line-height: 100px;
+    text-align: center;
+    letter-spacing: 4px;
+    padding-left: 4px;
+    box-sizing: border-box;
+    font-weight: 300;
+    color: #fff;
+    font-family: Oswald;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: $tokenClr;
+    left: 50%;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    transform: rotate(-135deg) translate(-100px) rotate(135deg) ;
+    box-shadow: 0px 5px 10px rgba(#000,0.5);
+    transition: $easing;
+    span {
+      letter-spacing: 0;
+    }
+  }
+}

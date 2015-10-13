@@ -1,0 +1,294 @@
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 15%;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -160px;
+  -webkit-animation: square 35s infinite;
+  -moz-animation: square 35s infinite;
+  -ms-animation: square 35s infinite;
+  -o-animation: square 35s infinite;
+  animation: square 35s infinite;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+}
+
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+  animation-duration: 17s;
+}
+
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 22s;
+  animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+}
+
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+  animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s;
+}
+
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(600deg);
+    transform: translateY(-1000px) rotate(600deg);
+  }
+}
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-1000px) rotate(600deg);
+    transform: translateY(-1000px) rotate(600deg);
+  }
+}
+.center {
+  z-index: 2;
+  display: block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  background: url(http://7nj356.com1.z0.glb.clouddn.com/lynnicfox.jpg);
+  background-size: 101%;
+  background-position: top left;
+  border-radius: 100%;
+  margin: 170px auto;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  box-shadow: 0px 5px 10px #000;
+}
+.center:hover {
+  box-shadow: 0px 5px 20px #000;
+  background-size: 115%;
+}
+.center:hover .outside {
+  transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  background: rgba(16, 115, 96, 0.5);
+  width: 200px;
+  letter-spacing: 10px;
+  padding-left: 10px;
+  line-height: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+.center .outside {
+  display: block;
+  position: absolute;
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: 4px;
+  padding-left: 4px;
+  box-sizing: border-box;
+  font-weight: 300;
+  color: #fff;
+  font-family: Oswald;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background: #16A085;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  transform: rotate(-135deg) translate(-100px) rotate(135deg);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+.center .outside span {
+  letter-spacing: 0;
+}
+
+html, body, .container, #canvas {
+  height: 100%;
+}
+
+html, body, .main-content {
+  overflow: hidden;
+}
+
+body {
+  background-color: #fff;
+}
+
+.container, #canvas {
+  position: relative;
+}
+
+#canvas {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.siderbar-nav {
+  width: 300px;
+  height: 100%;
+  top: 0;
+  left: -300px;
+  position: absolute;
+  text-align: center;
+  background-color: #333;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  -ms-transform: rotateY(-90deg);
+  -o-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+  color: #fff;
+}
+.siderbar-nav h1 {
+  margin-top: 70px;
+  font-size: 55px;
+  font-family: "Kaushan Script","Helvetica Neue",Helvetica,'Microsoft YaHei';
+}
+.siderbar-nav h3 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: "Kaushan Script","Helvetica Neue",Helvetica,'Microsoft YaHei';
+}
+.siderbar-nav ul {
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  list-style: none;
+}
+.siderbar-nav ul li {
+  padding: 10px 0;
+}
+.siderbar-nav ul li a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#canvas.display-nav {
+  -webkit-transform: translateX(300px);
+  -moz-transform: translateX(300px);
+  -ms-transform: translateX(300px);
+  -o-transform: translateX(300px);
+  transform: translateX(300px);
+}
+
+#canvas.display-nav .siderbar-nav {
+  -webkit-transform: perspective(600px) rotateY(0deg);
+  -moz-transform: perspective(600px) rotateY(0deg);
+  -ms-transform: perspective(600px) rotateY(0deg);
+  -o-transform: perspective(600px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.main-content {
+  background: #ff514c url(../imgs/noise.png);
+  height: 100%;
+  position: relative;
+}
+
+.toggle-nav {
+  color: #e6e6e6;
+  font-size: 30px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=main.css.map */
