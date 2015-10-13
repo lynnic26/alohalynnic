@@ -3,6 +3,11 @@ $(function(){
 		toggleNavigation();
 	});
 
+    $('.tlt').textillate({
+    	loop:true,
+    	// sets the minimum display time for each text before it is replaced
+  		minDisplayTime: 3000,
+    });
 
 	var $message = $('#message');
 	
@@ -16,7 +21,7 @@ $(function(){
 	$message.on('mouseleave', function(){
 		
 		setTimeout(function(){
-			$message.find('.outside').html('WELCOME');
+			$message.find('.outside').html('BLOG');
 		},250);
 	});
 });

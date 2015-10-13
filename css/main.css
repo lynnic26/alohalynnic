@@ -182,11 +182,16 @@
   letter-spacing: 0;
 }
 
-html, body, .container, #canvas {
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container, #canvas {
   height: 100%;
 }
 
-html, body, .main-content {
+.main-content {
   overflow: hidden;
 }
 
@@ -248,7 +253,7 @@ body {
 }
 .siderbar-nav ul {
   margin-top: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
   list-style: none;
 }
 .siderbar-nav ul li {
@@ -258,6 +263,14 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: #fff;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.siderbar-nav ul li a:hover {
+  color: #ff514c;
 }
 
 #canvas.display-nav {
@@ -284,11 +297,22 @@ body {
 
 .toggle-nav {
   color: #e6e6e6;
-  font-size: 30px;
+  font-size: 40px;
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 50px;
+  left: 50px;
   z-index: 2;
+}
+
+.center {
+  margin-bottom: 80px;
+}
+
+.tlt {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 27px;
+  color: #e6e6e6;
 }
 
 /*# sourceMappingURL=main.css.map */
